@@ -7,7 +7,7 @@
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
-<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" stroke="none">
+<g style="fill:currentColor" transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" stroke="none">
 <path d="M1246 2750 c-435 -49 -817 -291 -1029 -652 -430 -729 -77 -1651 736
 -1923 334 -112 727 -85 1039 71 246 123 467 337 591 572 170 325 197 702 76
 1049 -155 442 -564 787 -1029 867 -114 19 -287 26 -384 16z m668 -775 c176
@@ -18,10 +18,4 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
 331 158 331 -4 0 -125 -40 -270 -90 -144 -49 -262 -85 -262 -80 0 6 40 70 88
 143 94 140 438 669 785 1207 236 365 246 380 255 380 4 0 151 -290 326 -645z"/>
 </g>
-<style>
-  g { fill: #3853dc; }
-  @media (prefers-color-scheme: dark) {
-      g { fill: #29f69e; }
-  }
-</style>
 </svg>
