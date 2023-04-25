@@ -1,0 +1,31 @@
+---
+// layouts
+import Layout from "../layouts/Layout.astro";
+// imported components
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Page Not Found">
+  <div class="grid-container container content">
+    <h1 class="h1">Oops!</h1>
+    <p>We seem to have misplace something...</p>
+    <Link
+      href="/"
+      type="secondary"
+      icon={{
+        name: "tabler:home",
+        pos: "after",
+      }}
+    >
+      Go Home
+    </Link>
+  </div>
+  <style>
+    .grid-container {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      gap: var(--space-sm);
+    }
+  </style>
+</Layout>

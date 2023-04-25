@@ -1,8 +1,39 @@
 ---
 // layouts import
 import Layout from "../layouts/Layout.astro";
+
+// components import
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="About">
-	<h1>The About page</h1>
+  <section class="container about" aria-label="about me">
+    <img src="/images/headshot.jpg" alt="my Headshot" class="img" />
+
+    <div class="content">
+      <h1 class="h1">Welcome to My Astro Blog</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eius
+        laborum illum quia nisi eaque voluptate nesciunt maxime! Aliquam,
+        dolorum!
+      </p>
+      <Link
+        href="mailto:samirahmad5445@gmail.com"
+        type="secondary"
+        bordered={true}
+      >
+        get in touch
+      </Link>
+    </div>
+  </section>
+  <style>
+    .img {
+      width: 200px;
+      aspect-ratio: 2 / 3;
+      @media (min-width: 768px) {
+        width: 265px;
+        aspect-ratio: 2 / 3;
+      }
+    }
+  </style>
 </Layout>

@@ -34,7 +34,7 @@ h6 {
 /* CSS variables inspired by https://open-props.style/ */
 :root {
   /* colors */
-  --_hue: 235;
+  --_hue: 168;
 
   /* Light Mode */
   --bkg--light: var(--_hue) 25% 97%;
@@ -165,12 +165,6 @@ button {
   box-shadow: var(--shadow-md);
 }
 
-/* custom media query breakpoints */
-@custom-media --sm (width >=480px);
-@custom-media --md (width >=768px);
-@custom-media --lg (width >=1201px);
-@custom-media --xl (width >=1440px);
-
 body {
   min-height: 100vh;
   display: grid;
@@ -194,6 +188,10 @@ body {
 .content :where(h1, h2, h3, h4) {
   font-weight: 700;
   line-height: var(--lh-1-1);
+}
+
+.content > * + * {
+  margin-block-start: var(--space-2xs);
 }
 
 .h1 {
@@ -366,7 +364,7 @@ button {
 :where(footer) {
   width: 100%;
   text-align: center;
-  padding: var(--space-sm);
+  padding: var(--space-xs);
   background-color: hsl(var(--muted));
   box-shadow: var(--shadow-lg);
 
@@ -377,7 +375,7 @@ button {
     margin-inline: auto;
     gap: var(--space-sm);
 
-    @media --sm {
+    @media (min-width: 480px) {
       display: flex;
       justify-content: space-between;
     }
@@ -397,21 +395,21 @@ button {
   gap: var(--space-lg);
   align-items: center;
   margin-block: var(--space-xl);
+  grid-template-columns: 1fr;
 
-  @media --md {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 2fr;
     place-content: center;
   }
 
   & img {
     border-radius: var(--radius-full);
-    height: 400px;
-    width: min(300px, 100%);
     box-shadow: var(--shadow-lg);
     object-fit: cover;
     object-position: center;
+    justify-self: center;
 
-    @media --md {
+    @media (min-width: 768px) {
       justify-self: end;
     }
   }
@@ -431,11 +429,11 @@ button {
   gap: var(--space-md);
   align-items: start;
 
-  @media --md {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media --lg {
+  @media (min-width: 1201px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -529,7 +527,7 @@ header {
     gap: var(--space-lg);
     margin-block-start: var(--space-xl);
 
-    @media --md {
+    @media (min-width: 768px) {
       margin: 0;
     }
 
@@ -538,11 +536,11 @@ header {
       gap: var(--space-2xs);
       padding: 0;
 
-      @media --sm {
+      @media (min-width: 480px) {
         flex: 1 1 40%;
       }
 
-      @media --md {
+      @media (min-width: 768px) {
         text-align: left;
         justify-content: start;
         justify-items: start;
@@ -553,13 +551,13 @@ header {
     }
   }
 
-  @media --md {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr minmax(auto, 220px);
     gap: var(--space-lg);
     align-items: start;
   }
 
-  @media --lg {
+  @media (min-width: 1201px) {
     grid-template-columns: 1fr minmax(auto, 300px);
   }
 }
@@ -568,7 +566,7 @@ header {
   box-shadow: var(--shadow-md);
   object-fit: cover;
 
-  @media --lg {
+  @media (min-width: 1201px) {
     border-radius: var(--radius-md);
   }
 }

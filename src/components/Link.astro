@@ -30,7 +30,15 @@ const {
   class:list={["link", classes, type, { filled: isFilled, bordered: bordered }]}
   {...rest}
 >
-  {icon && icon.pos === "before" && <Icon name={name} height="24" width="24" />}
+  {
+    icon && icon.pos === "before" && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
   <slot />
-  {icon && icon.pos === "after" && <Icon name={name} height="24" width="24" />}
+  {
+    icon && icon.pos === "after" && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
 </a>
