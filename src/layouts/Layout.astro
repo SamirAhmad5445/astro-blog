@@ -1,0 +1,16 @@
+---
+import Head from "./Head.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<Head title={title} />
+	<body>
+		<slot>
+      <h1>
+        Welcome to <span style="font-weight: bold; color: midnightblue">{title}</span> page
+      </h1>
+    </slot>
+	</body>
+</html>
