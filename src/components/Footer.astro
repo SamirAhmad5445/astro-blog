@@ -1,0 +1,14 @@
+---
+---
+
+<footer>
+  <small
+    >copyright &copy; <span id="copyright"></span> | All right reseved</small
+  >
+</footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

@@ -1,0 +1,36 @@
+---
+// liberaries
+import { Icon } from "astro-icon";
+
+export interface Props {
+  href: string;
+  type?: "primary" | "secondary";
+  icon?: {
+    name: string;
+    pos: "before" | "after";
+  };
+  isFilled?: boolean;
+  bordered?: boolean;
+  classes?: string;
+}
+
+const {
+  href,
+  type = "primary",
+  icon,
+  isFilled = true,
+  bordered = false,
+  classes,
+  ...rest
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  class:list={["link", classes, type, { filled: isFilled, bordered: bordered }]}
+  {...rest}
+>
+  {icon && icon.pos === "before" && <Icon name={name} height="24" width="24" />}
+  <slot />
+  {icon && icon.pos === "after" && <Icon name={name} height="24" width="24" />}
+</a>

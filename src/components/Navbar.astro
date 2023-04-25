@@ -1,0 +1,33 @@
+---
+// library imports
+import { Icon } from "astro-icon";
+// component imports
+import Link from "./Link.astro";
+// data imports
+import navData from "../data/navData";
+---
+
+<nav aria-label="Primary">
+  <div class="navbar">
+    <a href="/" class="logomark" aria-label="Go home">
+      <Icon name="logomark" width="32" />
+    </a>
+    <ul>
+      {
+        navData.map((item) => (
+          <Link href={item.path} isFilled={false} data-navlink>
+            {item.name}
+          </Link>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.querySelectorAll("[data-navlink]").forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
+</script>
