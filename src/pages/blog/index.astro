@@ -13,9 +13,12 @@ const allPosts = await Astro.glob("./*.md");
     <h1 class="h1">New Blog Posts</h1>
     <div class="post-container">
       {
-        allPosts.map((post) => (
-          <PostCard post={post.frontmatter} href={post.url} />
-        ))
+        allPosts.map(
+          (post) =>
+            !post.frontmatter.draft && (
+              <PostCard post={post.frontmatter} href={post.url} />
+            )
+        )
       }
     </div>
   </section>
