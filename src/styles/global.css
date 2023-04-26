@@ -428,6 +428,11 @@ button {
   display: grid;
   gap: var(--space-md);
   align-items: start;
+  grid-auto-rows: 1fr;
+
+  & > * {
+    align-self: stretch;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -447,6 +452,7 @@ button {
   letter-spacing: 0.054em;
   text-transform: uppercase;
   font-size: var(--fs-sm);
+  white-space: nowrap;
 
   &:hover {
     color: hsl(var(--muted));
