@@ -47,12 +47,6 @@ h6 {
   --accent--dark: var(--_hue) 50% 50%;
   --muted--dark: var(--_hue) 20% 2%;
 
-  --bkg: var(--bkg--light);
-  --txt: var(--txt--light);
-  --accent: var(--accent--light);
-  --muted: var(--muted--light);
-  color-scheme: light;
-
   /* dynamic spacing adapted from utopia.fyi */
   --space-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
   --space-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
@@ -82,9 +76,6 @@ h6 {
   --lh-1-4: 1.4;
 
   /* shadows adapted from https: //www.joshwcomeau.com/shadow-palette/ */
-  --_shadow-strength: 0.25;
-  --_shadow-saturation: 30%;
-  --_shadow-lightness: 62%;
   --_shadow: var(--_hue) var(--_shadow-saturation) var(--_shadow-lightness);
   --shadow-sm: 0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
     0.3px 0.8px 1px -1.2px hsl(var(--_shadow) / var(--_shadow-strength)),
@@ -128,6 +119,19 @@ h6 {
   --transition-squish-fast: var(--_tspeed_fast) var(--_ttiming_squish);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bkg: var(--bkg--light);
+    --txt: var(--txt--light);
+    --accent: var(--accent--light);
+    --muted: var(--muted--light);
+    color-scheme: light;
+    --_shadow-strength: 0.25;
+    --_shadow-saturation: 30%;
+    --_shadow-lightness: 62%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bkg: var(--bkg--dark);
@@ -139,6 +143,28 @@ h6 {
     --_shadow-saturation: 75%;
     --_shadow-lightness: 6%;
   }
+}
+
+:root.light {
+  --bkg: var(--bkg--light);
+  --txt: var(--txt--light);
+  --accent: var(--accent--light);
+  --muted: var(--muted--light);
+  color-scheme: light;
+  --_shadow-strength: 0.25;
+  --_shadow-saturation: 30%;
+  --_shadow-lightness: 62%;
+}
+
+:root.dark {
+  --bkg: var(--bkg--dark);
+  --txt: var(--txt--dark);
+  --accent: var(--accent--dark);
+  --muted: var(--muted--dark);
+  color-scheme: dark;
+  --_shadow-strength: 0.75;
+  --_shadow-saturation: 75%;
+  --_shadow-lightness: 6%;
 }
 
 /* prefers reduced motion */

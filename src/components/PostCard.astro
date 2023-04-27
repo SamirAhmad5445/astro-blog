@@ -5,6 +5,9 @@ import { Image } from "@astrojs/image/components";
 // utilties
 import { slugify, formatDate } from "../js/utils";
 
+// imporetd components
+import Link from "./Link.astro";
+
 const { post, href } = Astro.props;
 
 const { category, title, author, date, image } = post;
@@ -27,11 +30,12 @@ const { category, title, author, date, image } = post;
     />
   </a>
   <div class="content">
-    <h2 class="h2"><a href={href}>{title}</a></h2>
+    <h2 class="h4"><a href={href} tabindex="-1">{title}</a></h2>
     <p>
       by <a href={`/author/${slugify(author)}/`}>{author}</a> • {
         formatDate(date)
       }
     </p>
+    <Link href={href} type="secondary">Read Post</Link>
   </div>
 </article>
