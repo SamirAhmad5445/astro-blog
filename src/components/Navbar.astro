@@ -1,8 +1,11 @@
 ---
 // library imports
 import { Icon } from "astro-icon";
+
 // component imports
 import Link from "./Link.astro";
+import Toggle from "./Toggle.astro";
+
 // data imports
 import navData from "../data/navData";
 ---
@@ -15,11 +18,16 @@ import navData from "../data/navData";
     <ul>
       {
         navData.map((item) => (
-          <Link href={item.path} isFilled={false} data-navlink>
-            {item.name}
-          </Link>
+          <li>
+            <Link href={item.path} isFilled={false} data-navlink>
+              {item.name}
+            </Link>
+          </li>
         ))
       }
+      <li>
+        <Toggle />
+      </li>
     </ul>
   </div>
 </nav>
