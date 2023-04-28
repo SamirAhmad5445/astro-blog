@@ -36,12 +36,6 @@
   margin: auto;
 }
 
-@media (hover: none) {
-  .toggle {
-    --size: 48px;
-  }
-}
-
 .toggle-icon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center center;
   transition: 500ms ease-out;
