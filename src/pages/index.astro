@@ -14,7 +14,7 @@ const allPosts = await Astro.glob("./blog/*.md");
 const filteredPosts = formatePosts(allPosts, {
   filterOutDraft: true,
   filterOutFuturePosts: true,
-  sortByDate: true,
+  sortByDate: false,
   limit: 3,
 });
 ---
@@ -34,19 +34,19 @@ const filteredPosts = formatePosts(allPosts, {
         href="/about"
         type="secondary"
         bordered={true}
-        icon={{ name: "tabler:mood-happy", pos: "after" }}
+        icon={{ name: "tabler:mood-smile", pos: "after" }}
       >
         about me
       </Link>
     </div>
   </section>
 
-  <section class="container" aria-label="New Blog Posts">
-    <h1 class="h1">New Blog Posts</h1>
+  <section class="container" aria-label="Some Blog Posts">
+    <h2 class="h2">Some Blog Posts</h2>
     <div class="post-container">
       {
         filteredPosts.map((post) => (
-          <PostCard post={post.frontmatter} href={post.url} />
+          <PostCard post={post.frontmatter} href={post.url} tagType="h3" />
         ))
       }
     </div>

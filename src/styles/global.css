@@ -260,6 +260,7 @@ a,
 button {
   color: hsl(var(--txt));
   border-radius: var(--radius-sm);
+  -webkit-tap-highlight-color: transparent;
   transition: opacity var(--transition-ease-fast),
     color var(--transition-ease-fast), box-shadow var(--transition-squish-slow);
 
@@ -303,7 +304,7 @@ button {
     user-select: none;
   }
 
-  & (svg) {
+  & svg {
     height: var(--fs-md);
     width: var(--fs-md);
   }

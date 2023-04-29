@@ -5,9 +5,11 @@ import { Image } from "@astrojs/image/components";
 // utilties
 import { slugify, formatDate } from "../js/utils";
 
-const { post, href } = Astro.props;
+const { post, href, tagType ="h2" } = Astro.props;
 
 const { category, title, author, date, image } = post;
+
+const Tag = tagType;
 ---
 
 <article class="card">
@@ -27,7 +29,7 @@ const { category, title, author, date, image } = post;
     />
   </a>
   <div class="content">
-    <h2 class="h2"><a href={href}>{title}</a></h2>
+    <Tag class="h2"><a href={href}>{title}</a></Tag>
     <p>
       by <a href={`/author/${slugify(author)}/`}>{author}</a> • {
         formatDate(date)
