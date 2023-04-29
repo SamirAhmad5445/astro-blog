@@ -14,7 +14,7 @@ const allPosts = await Astro.glob("./blog/*.md");
 const filteredPosts = formatePosts(allPosts, {
   filterOutDraft: true,
   filterOutFuturePosts: true,
-  sortByDate: false,
+  sortByDate: true,
   limit: 3,
 });
 ---
@@ -41,8 +41,8 @@ const filteredPosts = formatePosts(allPosts, {
     </div>
   </section>
 
-  <section class="container" aria-label="Some Blog Posts">
-    <h2 class="h2">Some Blog Posts</h2>
+  <section class="container" aria-label="New Blog Posts">
+    <h2 class="h2">New Blog Posts</h2>
     <div class="post-container">
       {
         filteredPosts.map((post) => (

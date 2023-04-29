@@ -551,6 +551,11 @@ header {
     gap: var(--space-sm);
   }
 
+  & pre {
+    padding: var(--space-md);
+    border-radius: var(--space-xs);
+  }
+
   & .sidebar {
     display: flex;
     flex-wrap: wrap;

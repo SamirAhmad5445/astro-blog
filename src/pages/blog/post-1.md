@@ -1,20 +1,61 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: A Post about Important Items Of Life
+title: How to start with CSS
 date: 2023-04-20
 author: Darnell McClure
 image: { src: "/images/post-1.jpg", alt: "A picture of a coder" }
-description: Have you ever wondered what the most important items of life are? Well, wonder no more!
+description: CSS stands for Cascading Style Sheets and it is the language we use to style an HTML document.
 draft: false
-category: Reference Docs
+category: css
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+## How to start with CSS
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate. Occaecat officia et sunt.
+CSS stands for Cascading Style Sheets and it is the language we use to style an HTML document. CSS describes how HTML elements should be displayed on the web page. In this post, I will show you some basic steps to start using CSS in your web projects.
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit excepteur excepteur ex.
+### Linking CSS to HTML
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+The first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are different ways to apply CSS to an HTML document, but the most common and recommended way is to link a separate CSS file from the head of the HTML document.
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est. Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+To do that, we need to create a file with the `.css` extension and save it in the same folder as our HTML document. For example, we can name it `styles.css`. Then, we need to add a `<link>` element inside the `<head>` of the HTML document, like this:
+
+```html
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+```
+
+This tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute.
+
+### Styling HTML elements
+
+Now that we have linked our CSS file to our HTML document, we can start writing some CSS rules to style our HTML elements. A CSS rule consists of a selector and a declaration block. The selector specifies which element or elements we want to style, and the declaration block contains one or more declarations that define how to style them. Each declaration consists of a property and a value, separated by a colon and ending with a semicolon.
+
+For example, if we want to make all `<h1>` elements red, we can write this rule in our `styles.css` file:
+
+```css
+h1 {
+  color: red;
+}
+```
+
+The selector is `h1`, which means it will apply to all `<h1>` elements in the HTML document. The declaration block is enclosed by curly braces and contains one declaration: `color: red;`. The property is `color`, which specifies the text color of the element, and the value is `red`, which is one of the predefined color names in CSS.
+
+We can add more declarations to the same rule, or write more rules for different selectors, depending on what we want to achieve. For example, if we want to change the font family and size of all `<p>` elements, we can write this rule:
+
+```css
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+```
+
+The selector is `p`, which means it will apply to all `<p>` elements in the HTML document. The declaration block contains two declarations: `font-family: verdana;` and `font-size: 20px;`. The property `font-family` specifies the font name or family of the element, and the value `verdana` is one of the generic font families in CSS. The property `font-size` specifies the size of the font in pixels, and the value `20px` means 20 pixels.
+
+### Learning more about CSS
+
+There are many more things you can do with CSS, such as adding colors, backgrounds, borders, margins, padding, alignment, positioning, layout, animation, and more. To learn more about CSS, you can check out some online resources such as:
+
+- [Getting started with CSS | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [CSS Tutorial | w3schools](https://www.w3schools.com/css/default.asp)
+- [Starting with HTML + CSS](https://www.w3.org/Style/Examples/011/firstcss.en.html)
