@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: CSS Custom variables
 date: 2023-04-25
-author: Victoria Greenfelder
+author: Samir Ahmad
 image: { src: "/images/post-5.jpg", alt: "A picture of a coder" }
 description: Custom properties, also known as CSS variables, are entities defined by CSS authors that contain specific values to be reused throughout a document.
 draft: false

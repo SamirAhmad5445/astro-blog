@@ -1,8 +1,8 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: Why Sass is Awesome?
-date: 2023-05-01
-author: Anna Dixon
+date: 2023-04-30
+author: Samir Ahmad
 image: { src: "/images/post-8.png", alt: "A picture of a sass logo" }
 description: CSS is a beautiful language that allows us to style our web pages and create stunning designs. But sometimes, CSS can be frustrating and tedious to write.
 draft: false
