@@ -5,13 +5,12 @@ import PostHeader from "./PostHeader.astro";
 
 const { frontmatter } = Astro.props;
 
-const { title, date, author, image, description, category, draft } =
-  frontmatter;
+const { title, date, author, image, category } = frontmatter;
 ---
 
 <Layout title={title}>
-  <script define:vars={{ draft }}>
-    draft && location.replace(`${location.origin}/is-draft`);
+  <script define:vars={{ date }}>
+    new Date(date) > new Date() && location.replace(`${location.origin}/404`);
   </script>
   <PostHeader {title} {date} {author} {image} {category} />
   <div class="post-content">

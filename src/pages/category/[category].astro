@@ -37,7 +37,8 @@ const { name, posts } = Astro.props;
 <Layout title={name}>
   <section class="container" aria-label={`Post about ${name}`}>
     <h1 class="h1">
-      Post about <span style="text-transform: capitalize;">{name}</span>
+      {posts.length > 1 ? `${posts.length} Posts` : "1 Post"} about
+      <span style="text-transform: uppercase;">{name}</span>
     </h1>
     <div class="post-container">
       {

@@ -218,19 +218,9 @@ body {
   margin-block-start: var(--space-2xs);
 }
 
-.h1 {
-  font-size: var(--fs-2xl);
-  max-width: var(--content-xs);
-}
-
-h1 span {
-  color: hsl(var(--accent));
-}
-
-.h2,
-.content h2 {
-  font-size: var(--fs-xl);
-  max-width: var(--content-sm);
+.h4,
+.content h4 {
+  font-size: calc(var(--fs-md) * 0.85);
 }
 
 .h3,
@@ -239,9 +229,19 @@ h1 span {
   max-width: var(--content-md);
 }
 
-.h4,
-.content h4 {
-  font-size: calc(var(--fs-md) * 0.85);
+.h2,
+.content h2 {
+  font-size: var(--fs-xl);
+  max-width: var(--content-sm);
+}
+
+.h1 {
+  font-size: var(--fs-2xl);
+  max-width: var(--content-xs);
+}
+
+h1 span {
+  color: hsl(var(--accent));
 }
 
 p {

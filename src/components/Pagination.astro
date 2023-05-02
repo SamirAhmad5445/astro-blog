@@ -1,0 +1,37 @@
+---
+// imposted components
+import Link from "./Link.astro";
+
+const { prev, next } = Astro.props;
+---
+
+<nav aria-label="Blog pages">
+  <span class:list={[`${!prev && "disable"}`]}>
+    <Link
+      href={prev}
+      type="primary"
+      bordered={true}
+      icon={{ name: "mdi:arrow-left-circle", pos: "before" }}
+    >
+      previous
+    </Link>
+  </span>
+  <span class:list={[`${!next && "disable"}`]}>
+    <Link
+      href={next}
+      type="primary"
+      bordered={true}
+      icon={{ name: "mdi:arrow-right-circle", pos: "after" }}
+    >
+      next
+    </Link>
+  </span>
+</nav>
+
+<style>
+  .disable {
+    cursor: no-drop;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+</style>

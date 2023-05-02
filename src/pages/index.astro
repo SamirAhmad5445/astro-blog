@@ -11,12 +11,7 @@ import { formatePosts } from "../js/utils";
 
 const allPosts = await Astro.glob("./blog/*.md");
 
-const filteredPosts = formatePosts(allPosts, {
-  filterOutDraft: true,
-  filterOutFuturePosts: true,
-  sortByDate: true,
-  limit: 3,
-});
+const filteredPosts = formatePosts(allPosts, { limit: 3 });
 ---
 
 <Layout title="Home">

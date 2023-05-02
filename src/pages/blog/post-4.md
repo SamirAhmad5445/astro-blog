@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: CSS has Function!
 date: 2023-04-23
 author: Anna Dixon
-image: { src: "/images/post-4.jpg", alt: "A picture of a coder" }
+image: { src: "/images/post-3.jpg", alt: "A picture of a coder" }
 description: Functions are special keywords that we can use to perform some magic tricks on CSS values and properties.
 draft: false
 category: CSS

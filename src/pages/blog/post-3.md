@@ -3,7 +3,7 @@ layout: "../../layouts/PostLayout.astro"
 title: New pseudo selectors
 date: 2023-04-29
 author: Samir Ahmad
-image: { src: "/images/post-3.jpg", alt: "A picture of a coder" }
+image: { src: "/images/post-4.jpg", alt: "A picture of a coder" }
 description: Pseudo selectors are special keywords that we can use to select HTML elements based on some criteria that are not directly expressed in the document tree.
 draft: false
 category: CSS
