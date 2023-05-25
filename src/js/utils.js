@@ -10,7 +10,9 @@ export function slugify(text) {
 }
 
 export function formatDate(date) {
-  return new Date(date).toLocaleDateString("en-US");
+  let options = new Object();
+  options.timeZone = "UTC";
+  return new Date(date).toLocaleDateString("en-US", options);
 }
 
 export function formatePosts(
