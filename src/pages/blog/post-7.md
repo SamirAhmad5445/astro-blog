@@ -1,11 +1,11 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: What is Sass?
-date: 2023-04-27
+date: 2023-05-11
 author: Anna Dixon
-image: { src: "/images/post-6.jpg", alt: "A picture of a coder" }
+image: { src: "/images/post-3.jpg", alt: "A picture of a coder" }
 description: Sass (Syntactically Awesome Style Sheets) is a scripting language that extends CSS (Cascading Style Sheets).
-draft: true
+draft: false
 category: sass
 ---
 

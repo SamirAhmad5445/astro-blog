@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: Island Architecture in Astro
-date: 2023-05-06
+date: 2023-05-26
 author: Samir Ahmad
 image: { src: "/images/post-3.jpg", alt: "A picture of coder" }
 description: Island architecture is a web development pattern that allows you to create fast and interactive websites with minimal JavaScript.

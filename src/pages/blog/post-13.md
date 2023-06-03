@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: Audio and Video in HTML
-date: 2023-05-05
+date: 2023-05-20
 author: Samir Ahmad
 image: { src: "/images/post-3.jpg", alt: "A picture of coder" }
 description: HTML (Hypertext Markup Language) is the language of the web. It defines the structure and content of a web page. But HTML is not only about text and images.

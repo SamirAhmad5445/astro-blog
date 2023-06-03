@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: the reduce() method
-date: 2023-05-05
+date: 2023-05-28
 author: Samir Ahmad
 image: { src: "/images/post-6.jpg", alt: "A picture of coder" }
 description: The reduce method is one of the most powerful and versatile methods in JavaScript.

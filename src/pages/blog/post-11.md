@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: HTML and Accessiblity
-date: 2023-05-03
+date: 2023-05-13
 author: Samir Ahmad
 image: { src: "/images/post-1.jpg", alt: "A picture of coder" }
 description: HTML (Hypertext Markup Language) is the foundation of any website. It defines the structure and content of a web page. However, not all HTML code is created equal.
